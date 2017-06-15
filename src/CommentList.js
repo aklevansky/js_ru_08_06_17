@@ -22,6 +22,7 @@ export default class CommentList extends Component {
 		}
 
 		const {comments} = this.props;
+		//проще просто comment передать в пропсы
 		const commentList = comments.map( comment => <li key={comment.id}> <Comment user={comment.user} text={comment.text}/></li> )
 
 		return (<ul>{commentList}</ul>)
