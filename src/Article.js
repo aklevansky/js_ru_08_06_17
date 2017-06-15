@@ -35,6 +35,7 @@ export default class Article extends Component {
 
     getComments(article) {
         const {comments} = article;
+        //Я б эту проверку спрятал в CommentList
         if ( !comments ) {
             return null;
         }
