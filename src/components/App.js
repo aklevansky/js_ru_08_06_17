@@ -11,7 +11,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ArticleList articles = {this.props.articles} />
+                <ArticleList  articles = {this.props.articles}/>
                 <ArticlesChart articles = {this.props.articles} />
             </div>
         )
