@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 export default (OriginalList) => class AccordeonList extends Component {
 
 	state = {
+		//Не привязывайся к названиям сущностей, вся суть декораторов в универсальности. Сделай openItemId
 		openArticleId: null
 	}
 
