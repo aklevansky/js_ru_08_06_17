@@ -33,6 +33,7 @@ export default class CommentAddForm extends React.Component {
 
 		try {
 			this.checkInput(ev.target.value.length, 15, 50);
+			//Не лезь в DOM. Я же говорил, что этого стоит избегать, задача писать в декларативном стиле
 			ev.target.classList.remove('lengthError');
 
 		} catch (e) {
@@ -45,7 +46,7 @@ export default class CommentAddForm extends React.Component {
 	checkInput = (input, min, max) => {
 	
 		if (input < min || input > max) {
-
+			//в JS ексепшины не очень хорошая практика, очень ухудшают перорманс
 			throw new Error('Length Error');
 		}
 	}
