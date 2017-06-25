@@ -12,7 +12,8 @@ class Article extends PureComponent {
         article: PropTypes.shape({
             id: PropTypes.string.isRequired,
             title: PropTypes.string.isRequired,
-            text: PropTypes.string
+            text: PropTypes.string,
+            date: PropTypes.string
         }).isRequired,
         isOpen: PropTypes.bool,
         toggleOpen: PropTypes.func
@@ -30,9 +31,13 @@ class Article extends PureComponent {
 
     render() {
         const {article, isOpen, toggleOpen} = this.props
+
+        const date = new Date(article.date);
+
         return (
             <div ref = {this.setContainerRef}>
                 <h3>{article.title}</h3>
+                <h3>Date: {date.toLocaleString('ru')}</h3>
                 <button onClick = {toggleOpen}>
                     {isOpen ? 'close' : 'open'}
                 </button>

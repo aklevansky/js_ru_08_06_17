@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DateRange from './DateRange'
 import SelectFilter from './Select'
+import {connect} from 'react-redux'
 
 class Filters extends Component {
     static propTypes = {
+        // from connect
         articles: PropTypes.array
     };
 
@@ -18,4 +20,4 @@ class Filters extends Component {
     }
 }
 
-export default Filters
+export default connect( (state) => ({articles: state.articles}) )(Filters)
