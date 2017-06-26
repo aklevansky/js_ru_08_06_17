@@ -5,6 +5,8 @@ import {filterDate as filterDateAC} from '../../AC'
 import 'react-day-picker/lib/style.css';
 
 class DateRange extends Component {
+
+   //Стейт уже не нужен, бери значения из стора, не храни значения в двух местах 
     state = {
         from: null,
         to: null
