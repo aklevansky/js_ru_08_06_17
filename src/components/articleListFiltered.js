@@ -29,6 +29,7 @@ class ArticleListFiltered extends ReactComponent {
 
     	// методы для фильтрации
 
+        //ок, но еще лучше делать фильтрацию в коннекте в ArticleList
     	checkSelectFilter = (article) => {
 
             if ( !this.props.filterSelect.length ) {
